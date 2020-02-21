@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import './App.css';
+import './styles/global.css';
 
 import Home from './pages/index';
 import MovieTicketing from './pages/movie-ticketing-app';
 
 function App() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <Router>
       <div className="App">
@@ -21,13 +23,16 @@ function App() {
               <a href="/about" className="navbar-item">
                 About
               </a>
-              <div className="navbar-burger">
+              <div
+                className={`navbar-burger ${isMenuOpen ? 'is-active' : ''}`}
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+              >
                 <span></span>
                 <span></span>
                 <span></span>
               </div>
             </div>
-            <div className="navbar-menu">
+            <div className={`navbar-menu ${isMenuOpen ? 'is-active' : ''}`}>
               <div className="navbar-start">
                 <a href="/" className="navbar-item">
                   Home
