@@ -4,6 +4,7 @@ import './styles/global.css';
 
 import Home from './pages/index';
 import MovieTicketing from './pages/movie-ticketing-app';
+import Tones from './pages/tone';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -40,8 +41,8 @@ function App() {
                 <a href="/movie-ticketing-app" className="navbar-item">
                   Movie Ticketing App
                 </a>
-                <a href="/" className="navbar-item">
-                  three
+                <a href="/tone" className="navbar-item">
+                  Tones Synth
                 </a>
                 <a href="/" className="navbar-item">
                   four
@@ -61,6 +62,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/movie-ticketing-app" component={MovieTicketing} />
+          <Route exact path="/tone" component={Tones} />
         </Switch>
         <footer className="footer">
           <div className="container">
