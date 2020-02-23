@@ -7,6 +7,10 @@
   list-style-type: none;
 }
 
+#root {
+  width: 100%;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   background: #333;

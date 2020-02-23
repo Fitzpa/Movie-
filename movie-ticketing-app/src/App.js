@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import './styles/global.css';
 
 import Home from './pages/index';
 import MovieTicketing from './pages/movie-ticketing-app';
 import Tones from './pages/tone';
+import ExpenseTracker from './pages/expense-tracker';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -44,8 +44,8 @@ function App() {
                 <a href="/tone" className="navbar-item">
                   Tones Synth
                 </a>
-                <a href="/" className="navbar-item">
-                  four
+                <a href="/expense-tracker" className="navbar-item">
+                  Expense Tracker
                 </a>
               </div>
               <div className="navbar-end">
@@ -63,6 +63,7 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route exact path="/movie-ticketing-app" component={MovieTicketing} />
           <Route exact path="/tone" component={Tones} />
+          <Route exact path="/expense-tracker" component={ExpenseTracker} />
         </Switch>
         <footer className="footer">
           <div className="container">

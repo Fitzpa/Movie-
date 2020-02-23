@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import * as Tone from 'tone';
+import '../styles/tones.css';
 
 const Tones = () => {
   const [freq, setFreq] = useState();
